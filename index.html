@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #bg{
+            margin-top: 100px;
+            margin-left: 300px;
+            width: 900px;
+            height: 500px;
+            background-color: rgb(0, 136, 255);
+        }
+        h1{
+            text-align: center;
+            padding-top: 200px;
+           
+        }
+        button{
+            margin-top: 220px;
+            float:right;
+        }
+    </style>
+</head>
+<body>
+    <div id="bg">
+        <div>
+        <h1>background color:<span id="cr">blue</span></h1></div>
+        <button onclick="clr()">click here</button>
+    </div>
+    <script>
+        //background color change using array
+        let arr=['red','yellow','green','white'];
+        let i=0;
+        function clr(){
+            const i1=document.getElementById("bg").style.backgroundColor=arr[i];
+                    document.getElementById("cr").innerHTML=arr[i];
+            i=(i+1)%arr.length;
+        }
+    </script>
+</body>
+</html>
